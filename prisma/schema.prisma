@@ -1,0 +1,74 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model jobrole {
+  role_id                    Int                   @id @default(autoincrement())
+  role_title                 String
+  date_posted                DateTime?
+  status                     String?
+  about_role                 String                @db.VarChar(2000)
+  expectations               String                @db.VarChar(2000)
+  qualifications             String                @db.VarChar(2000)
+  internal_external_contacts String?               @db.VarChar(2000)
+  skills_and_competencies    String                @db.VarChar(2000)
+  job_purpose                String                @default("") @db.VarChar(2000)
+  applicants                 applicants[]
+  job_responsibilities       job_responsibilities?
+}
+
+model applicants {
+  id           Int        @id @default(autoincrement())
+  first_name   String?    @db.VarChar(50)
+  last_name    String?    @db.VarChar(50)
+  role_applied Int?
+  document_id  Int?
+  email        String     @unique(map: "applicants_unique") @db.VarChar(50)
+  phone        String?    @db.VarChar(50)
+  documents    documents? @relation(fields: [document_id], references: [document_id], onDelete: Restrict, onUpdate: Restrict, map: "applicants_documents_FK")
+  jobrole      jobrole?   @relation(fields: [role_applied], references: [role_id], onDelete: Restrict, onUpdate: Restrict, map: "applicants_jobrole_FK")
+
+  @@index([document_id], map: "applicants_documents_FK")
+  @@index([role_applied], map: "applicants_jobrole_FK")
+}
+
+model documents {
+  document_id        Int          @id @default(autoincrement())
+  cv                 String?      @db.VarChar(255)
+  application_letter String?      @db.VarChar(255)
+  nrc                String?      @db.VarChar(255)
+  applicants         applicants[]
+}
+
+model user {
+  id         Int    @id @default(autoincrement())
+  email      String @unique(map: "User_email_key")
+  password   String
+  role       String
+  surname    String
+  first_name String
+}
+
+model activitylog {
+  id        Int       @id @default(autoincrement())
+  userId    Int?
+  action    String?   @db.VarChar(255)
+  details   String?   @db.LongText
+  createdAt DateTime? @default(now()) @db.DateTime(0)
+}
+
+model job_responsibilities {
+  id                                        Int     @id @default(autoincrement())
+  job_role_id                               Int     @unique(map: "Job_Responsibilities_job_role_id_key")
+  sales_strategy_and_planning               String? @db.VarChar(2000)
+  client_acquisition_and_account_management String? @db.VarChar(2000)
+  market_research_and_product_feedback      String? @db.VarChar(2000)
+  sales_forecasting_and_reporting           String? @db.VarChar(2000)
+  team_collaboration_and_leadership         String? @db.VarChar(2000)
+  jobrole                                   jobrole @relation(fields: [job_role_id], references: [role_id], map: "Job_Responsibilities_job_role_id_fkey")
+}
