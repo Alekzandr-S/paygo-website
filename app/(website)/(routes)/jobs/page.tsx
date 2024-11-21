@@ -2,7 +2,7 @@ import React from 'react'
 import JobsPage, { JobOffer } from './components/jobsPage/page'
 
 const getJobs = async (): Promise<JobOffer[]> =>  {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api/jobs';
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://host.docker.internal:3001/api/jobs';
 
   try {
     const responseData = await fetch( apiUrl, {
