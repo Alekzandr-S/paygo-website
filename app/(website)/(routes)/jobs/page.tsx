@@ -2,12 +2,11 @@ import React from 'react'
 import JobsPage, { JobOffer } from './components/jobsPage/page'
 
 const getJobs = async (): Promise<JobOffer[]> =>  {
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://host.docker.internal:3001/api/jobs';
+  const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000/api/job';
 
   try {
     const responseData = await fetch( apiUrl, {
       method: 'GET',
-      cache: 'no-cache',
       headers: { 'Content-Type': 'application/json'},
     });
     const response = await responseData.json();

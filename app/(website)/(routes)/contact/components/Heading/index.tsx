@@ -145,7 +145,7 @@ const Heading = () => {
               animate="show"
               exit="hidden"
             >
-              <Link href={'/jobs'}>
+              <Link href={'/careers'}>
                 <Button className='text-background font-bold text-2xl'>
                   <span className='underline'>View Careers </span> &#160; &#160; &rarr;
                 </Button>

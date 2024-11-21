@@ -4,9 +4,10 @@ import JobDetails from './job';
 import { prisma } from '@/lib/prisma';
 
 export default async function lab({ params }: { params: { slug: string} }) {
+  const apiUrl = process.env.NEXT_PUBLIC_FETCH_JOBS;
   const getJob = async () => {
     try {
-      const responseData = await fetch(`http://host.docker.internal:3001/api/get-job?id=${params.slug}`, {
+      const responseData = await fetch(`${apiUrl}?id=${params.slug}` || `http://localhost:3000/api/get-job?id=${params.slug}`, {
         method: 'GET',
         cache: 'no-cache',
         headers: { 'Content-Type': 'application/json'},
