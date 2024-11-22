@@ -1,7 +1,9 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
+import { fadeIn } from '@/hooks/variants';
 import { ChevronDownIcon } from '@radix-ui/react-icons'
+import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react'
 function JobDetails() {
 
@@ -78,25 +80,54 @@ Coach and guide junior sales staff to enhance their selling skills and performan
   // const jobResHeadings = Object.keys(jobRes as {});
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between px-24 lg:px-0 p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between mx-24 lg:px-0 p-24">
 
       <div className='flex flex-col items-center mt-8'>
-        <div  className='flex justify-start mt-4 mb-20'>
+        <motion.div  
+          className='flex justify-start mt-4 mb-20'
+          variants={fadeIn('up', 0.2)}
+          initial="hidden"
+          viewport={{ once: true }}
+          whileInView="show"
+          exit="hidden"
+        >
           <h1 className='text-[60px]/[70px] text-center font-extrabold text-[#852882]'>Sales Manager</h1>
           {/* <h1 className='text-[60px]/[70px] text-center font-extrabold text-[#852882]'>{jobRole!.role_title}</h1> */}
-        </div>
-        <div  className='mb-8 top-[20em]'>
+        </motion.div>
+        <motion.div  
+          className='mb-8 top-[20em]'
+          variants={fadeIn('up', 0.3)}
+          initial="hidden"
+          viewport={{ once: true }}
+          whileInView="show"
+          exit="hidden"
+          >
           <Button className='rounded-3xl py-8 px-16 bg-[#852882] text-white' variant='outline' onClick={scrollToApplying}>Apply Now!</Button>
-        </div>
-        <div className=' mb-12'>
+        </motion.div>
+        <motion.div 
+          className=' mb-12'
+          variants={fadeIn('up', 0.4)}
+          initial="hidden"
+          viewport={{ once: true }}
+          whileInView="show"
+          exit="hidden"
+        >
           <p className='text-[#852882] font-semibold'>We normally respond within a week</p>
-        </div>
-        <div className='mb-24'>
+        </motion.div>
+        <motion.div 
+          className=''
+          variants={fadeIn('up', 0.5)}
+          initial="hidden"
+          viewport={{ once: true }}
+          whileInView="show"
+          exit="hidden"
+        >
           <Button className='bg-[#852882]' variant="outline" onClick={scrollToAboutRole} size="icon">
             <ChevronDownIcon className="h-4 w-4" />
           </Button>
-        </div>
-        <div className='flex items-center justify-center mx-4 lg:mx-24 xl:mx-28'>
+        </motion.div>
+          
+        <div className='flex items-center justify-center mx-4 lg:mx-24 xl:mx-28 mt-24'>
           <p>
             Digital Shared Services Limited Trading as Digital PayGo is inviting applications from suitably qualified and experienced individuals for the position of Sales Manager in its Commercial Department, aimed at contributing to Digital PayGo’s strategic vision.
           </p>
