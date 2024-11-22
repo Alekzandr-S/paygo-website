@@ -1,39 +1,9 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-// import { toast } from '@/components/ui/use-toast'
 import { ChevronDownIcon } from '@radix-ui/react-icons'
 import React, { useEffect, useRef, useState } from 'react'
-// import DrawerComponent from './components/Drawer'
-// import { strict } from 'assert'
-// import { prisma } from '@/lib/prisma'
-// import { job_responsibilities, jobrole } from '@prisma/client'
-
-// export const dynamic = "force-dynamic"
-
-// type JobDetailsProps = {
-//   job?: {
-//     role_id: number;
-//     role_title: string;
-//     date_posted: Date | null;
-//     status: string | null;
-//     about_role: string;
-//     internal_external_contacts: string | null;
-//     skills_and_competencies: string;
-//     job_purpose: string;
-//     expectations: string;
-//     qualifications: string;
-//   } | null;
-//   jobResponsibilities?: job_responsibilities | null;
-// };
-
 function JobDetails() {
-  // if (!job) {
-  //   return <div className="flex justify-center">Job role not found.</div>;
-  // }
-  
-  // const [jobRole, setJobRole] = useState(job);
-  // const [jobRes, setJobRes] = useState(jobResponsibilities);
 
 
   const aboutRoleRef = useRef<HTMLDivElement>(null);
@@ -108,7 +78,8 @@ Coach and guide junior sales staff to enhance their selling skills and performan
   // const jobResHeadings = Object.keys(jobRes as {});
   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="flex min-h-screen flex-col items-center justify-between px-24 lg:px-0 p-24">
+
       <div className='flex flex-col items-center mt-8'>
         <div  className='flex justify-start mt-4 mb-20'>
           <h1 className='text-[60px]/[70px] text-center font-extrabold text-[#852882]'>Sales Manager</h1>
@@ -125,12 +96,12 @@ Coach and guide junior sales staff to enhance their selling skills and performan
             <ChevronDownIcon className="h-4 w-4" />
           </Button>
         </div>
-        <div className='flex items-center mx-0 lg:mx-24 xl:mx-28'>
+        <div className='flex items-center justify-center mx-4 lg:mx-24 xl:mx-28'>
           <p>
             Digital Shared Services Limited Trading as Digital PayGo is inviting applications from suitably qualified and experienced individuals for the position of Sales Manager in its Commercial Department, aimed at contributing to Digital PayGo’s strategic vision.
           </p>
         </div>
-        <ol className='mx-0 lg:mx-24 xl:mx-28 list-decimal'>
+        <ol className='mx-8 lg:mx-24 xl:mx-28 list-decimal'>
           <li className='fle flex-col items-center mt-12'>
             <div ref={aboutRoleRef} className='   '>
               <h3 className='text-3xl mb-4'>Job Purpose</h3>
@@ -230,7 +201,7 @@ Coach and guide junior sales staff to enhance their selling skills and performan
           </li>
         </ol>
         <div className='mt-4'>
-          <p className='mx-0 lg:mx-24 xl:mx-28'>
+          <p className='mx-8 lg:mx-24 xl:mx-28'>
             If you are interested in this role and meet the qualifications set out in 4 above, please submit your application indicating the position being applied for in the subject line by email <span>
               <a
                 href="mailto: HR@digitalpaygo.com"
@@ -241,16 +212,16 @@ Coach and guide junior sales staff to enhance their selling skills and performan
             <span className='font-bold'> no later than Friday, 13th December, 2024.</span>
           </p>
 
-          <p className='pt-4 mx-28'>ALL application must have the following documents:</p>
-          <ol className='list-[lower-alpha] mx-32'>
+          <p className='pt-4 mx-8 lg:mx-28'>ALL application must have the following documents:</p>
+          <ol className='list-[lower-alpha] mx-16 lg:mx-32'>
             <li>Application/cover letter;</li>
             <li>Copies of qualifications;</li>
             <li>ZAQA Certificate of Verification for the required qualifications; and</li>
             <li>Detailed Curriculum Vitae.</li>
           </ol>
 
-          <p className='mx-0 lg:mx-24 xl:mx-28 pt-4'>Applications sent without these attachments <span  className='font-bold'>WILL NOT</span> be considered.</p>
-          <p className='mx-0 lg:mx-24 xl:mx-28 pt-4 font-extrabold'>ONLY SHORTLISTED CANDIDATES WILL BE CONTACTED.</p>
+          <p className='mx-8 lg:mx-24 xl:mx-28 pt-4'>Applications sent without these attachments <span  className='font-bold'>WILL NOT</span> be considered.</p>
+          <p className='mx-8 lg:mx-24 xl:mx-28 pt-4 font-extrabold'>ONLY SHORTLISTED CANDIDATES WILL BE CONTACTED.</p>
         </div>
       </div> 
     </main> 
