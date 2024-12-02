@@ -14,7 +14,7 @@ const HeroSection = () => {
             <motion.h2
                 className='text-red-500 hover:text-red-700 pt-8 lg:pt-0 underline text-5xl font-bold leading-snug tracking-tight lg:text-5xl lg:leading-tight xl:text-6xl xl:leading-tight'
             >
-                <Link href={'/jobs'}>
+                <Link href={'/careers'}>
                     We're Hiring!
                 </Link>
             </motion.h2>

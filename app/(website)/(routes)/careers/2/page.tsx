@@ -98,7 +98,7 @@ function JobDetails() {
     <main className="flex min-h-screen flex-col items-center justify-between mx-24 lg:px-0 p-24">
       <div className='flex flex-col items-center mt-8 lg:mt-0'>
         <motion.div  
-          className='flex justify-start mt-4 mb-20'
+          className='flex justify-start mt-4 mb-12'
           variants={fadeIn('up', 0.2)}
           initial="hidden"
           viewport={{ once: true }}
@@ -121,7 +121,7 @@ function JobDetails() {
           <Button className='rounded-3xl py-8 px-16 bg-[#852882] text-white' variant='outline' onClick={scrollToApplying}>Apply Now!</Button>
         </motion.div>
         <motion.div 
-          className=' mb-12'
+          className=' mb-8'
           variants={fadeIn('up', 0.4)}
           initial="hidden"
           viewport={{ once: true }}
@@ -131,7 +131,7 @@ function JobDetails() {
           <p className='text-[#852882] font-semibold'>We normally respond within a week</p>
         </motion.div>
         <motion.div 
-          className=''
+          className='mb-12'
           variants={fadeIn('up', 0.5)}
           initial="hidden"
           viewport={{ once: true }}

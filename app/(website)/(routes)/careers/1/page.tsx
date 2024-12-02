@@ -127,7 +127,7 @@ Coach and guide junior sales staff to enhance their selling skills and performan
           </Button>
         </motion.div>
           
-        <div className='flex items-center justify-center mx-4 lg:mx-24 xl:mx-28 mt-24'>
+        <div className='flex items-center justify-center mx-4 lg:mx-24 xl:mx-28 mt-32'>
           <p>
             Digital Shared Services Limited Trading as Digital PayGo is inviting applications from suitably qualified and experienced individuals for the position of Sales Manager in its Commercial Department, aimed at contributing to Digital PayGo’s strategic vision.
           </p>

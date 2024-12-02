@@ -34,8 +34,8 @@ const JobsPage = () => {
           <AnimatedTextWord text='Job Openings' />
         </h2>
       </div>
-      <div className='pb-12'>
-        <div className='flex justify-between items-start w-full pb-8'>
+      <div className='pb-8'>
+        <div className='flex justify-between items-start w-ful pb-8'>
           <p className='font-bold text-xl'>{filteredJobs.length} job(s) available</p>
           <Input
             type="text"
@@ -51,7 +51,7 @@ const JobsPage = () => {
           ) : (
             filteredJobs.map((job) => (
                 <Link key={job.role_id} href={`/careers/${job.role_id}`} passHref>
-                  <div className='rounded-3xl h-[50px]'>
+                  <div className=' rounded-3xl h-[50px]'>
                     <Image
                       src={'/images/jobs-1.svg'}
                       width="216"
@@ -60,7 +60,7 @@ const JobsPage = () => {
                       alt={job.role_title}
                       loading="eager"
                     />
-                    <h3 className='p-4 text-center'>{job.role_title}</h3>
+                    <h3 className='p-4 w-[200px] text-center'>{job.role_title}</h3>
                   </div>
                 </Link>
               ))
