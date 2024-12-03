@@ -1,4 +1,4 @@
-import { JobOffer } from "./page";
+import { JobOffer } from "./careers-page";
 
 export const jobOportunities: JobOffer[] = [
   {
