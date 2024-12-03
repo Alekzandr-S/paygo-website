@@ -3,6 +3,7 @@ import { fadeIn } from '@/hooks/variants'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
+import Background from '../../../services/components/Services/components/Background'
 
 const Hero = () => {
   return (
@@ -44,6 +45,12 @@ const Hero = () => {
             className='hidden xl:block'
           />
         </motion.div>
+        <div className='absolute bottom-4 left-0 z-[-1] opacity-30 lg:opacity-100'>
+          <Background />
+        </div>
+        <div className='absolute top-16 right-0 z-[-1] opacity-30 lg:opacity-100'>
+          <Background />
+        </div>
     </div>
   )
 }

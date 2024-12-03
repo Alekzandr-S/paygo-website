@@ -5,7 +5,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedTextWord from '@/components/AnimatedTextWord';
 import { Input } from '@/components/ui/input';
-// import { jobOportunities } from './utils';
 
 export type JobOffer = {
   role_id: number;
