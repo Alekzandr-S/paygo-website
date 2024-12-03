@@ -1,10 +1,12 @@
 import React from 'react'
-import JobsPage from './careers-page'
+import JobsPage, { JobOffer } from './careers-page'
+import { jobOportunities } from './utils'
 
-const page = () => {
+const page = async () => {
+  const jobs: JobOffer[] = jobOportunities;
   return (
     <div>
-      <JobsPage />
+      <JobsPage jobOportunities={jobs} />
     </div>
   )
 }
