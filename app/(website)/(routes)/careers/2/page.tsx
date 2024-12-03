@@ -52,7 +52,7 @@ function JobDetails() {
       Proven track record of success in leading and managing teams, developing and implementing strategies, and driving results.
       Deep understanding of relevant financial and regulatory frameworks.
       Experience with financial modelling and forecasting tools.
-      Proficiency in various finance and operations software (e.g., ERP systems, data analytics platforms).
+      Proficiency in various finance and operations software (such as, ERP systems, data analytics platforms).
       Digital Finance Services (DFS) knowledge is an added advantage.
   `.split('.').filter(sentence => sentence.trim() !== '');
   // const skillsAndCompetencies = jobRole?.skills_and_competencies?.split('.').filter(sentence => sentence.trim() !== '');

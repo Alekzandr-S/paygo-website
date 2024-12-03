@@ -3,6 +3,7 @@ import { fadeIn } from '@/hooks/variants'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import React from 'react'
+import Background from '../../../services/components/Services/components/Background'
 
 const PaymentGateway = () => {
   return (
@@ -41,6 +42,12 @@ const PaymentGateway = () => {
         <p>Experience seamless transactions with our cutting-edge payment gateway. Designed for efficiency and security, our platform ensures fast, reliable payments for your business. Enjoy easy integration all backed by 24/7 customer service. Elevate your business with our trusted payment solution and offer your customers a smooth, hassle-free payment experience.</p>
       </motion.div>
     {/* </div> */}
+    <div className='absolute bottom-4 left-0 z-[-1] opacity-30 lg:opacity-100'>
+      <Background />
+    </div>
+    <div className='absolute top-16 right-0 z-[-1] opacity-30 lg:opacity-100'>
+      <Background />
+    </div>
     </div>
   )
 }

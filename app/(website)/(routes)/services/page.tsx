@@ -9,7 +9,7 @@ const Page = () => {
     return (
         <main className="flex flex-col items-center  pt-24">
             <section className=''>
-            <Heading />
+              <Heading />
             </section>
             <section className=''>
               <Services />
