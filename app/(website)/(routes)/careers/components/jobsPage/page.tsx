@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import AnimatedTextWord from '@/components/AnimatedTextWord';
 import { Input } from '@/components/ui/input';
+import { Card } from '@/components/ui/card';
 
 export type JobOffer = {
   role_id: number;
@@ -54,7 +55,7 @@ const JobsPage: React.FC<any> = ({ jobs = [] }) => {
           ) : (
             filteredJobs.map((job) => (
                 <Link key={job.role_id} href={`/jobs/${job.role_id}`} passHref>
-                  <div className='rounded-3xl h-[50px]'>
+                  <Card className='rounded-3xl h-[50px]'>
                     <Image
                       src={'/images/jobs-1.svg'}
                       width="216"
@@ -63,8 +64,8 @@ const JobsPage: React.FC<any> = ({ jobs = [] }) => {
                       alt={job.role_title}
                       loading="eager"
                     />
-                    <h3 className='p-4 text-center'>{job.role_title}</h3>
-                  </div>
+                    <p className='p-4 text-center'>{job.role_title}</p>
+                  </Card>
                 </Link>
               ))
           )} 

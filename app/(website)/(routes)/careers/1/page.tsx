@@ -240,7 +240,7 @@ Coach and guide junior sales staff to enhance their selling skills and performan
                 HR@digitalpaygo.com
                 </a>
               </span> 
-            <span className='font-bold'> no later than Friday, 13th December, 2024.</span>
+            <span className='font-bold'> no later than Saturday, 21st December, 2024.</span>
           </p>
 
           <p className='pt-4 mx-8 lg:mx-28'>ALL application must have the following documents:</p>
