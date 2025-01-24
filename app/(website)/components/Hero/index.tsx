@@ -11,13 +11,13 @@ const HeroSection = () => {
   return (
       <div className=" flex flex-wrap w-full lg:px-24 w-ful p-8 pt-0 flex-wra">
         <div className="flex-1 flex flex-col w-full lg:w-1/2 justify-center">
-            {/* <motion.h2
+            <motion.h2
                 className='text-red-500 hover:text-red-700 pt-8 lg:pt-0 underline text-5xl font-bold leading-snug tracking-tight lg:text-5xl lg:leading-tight xl:text-6xl xl:leading-tight'
             >
                 <Link href={'/careers'}>
                     We're Hiring!
                 </Link>
-            </motion.h2> */}
+            </motion.h2>
             <motion.h2
                 variants={fadeIn('right', 0.2)}
                 initial="hidden"
