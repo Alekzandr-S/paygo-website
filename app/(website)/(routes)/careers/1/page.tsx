@@ -5,9 +5,8 @@ import { fadeIn } from '@/hooks/variants';
 import { ChevronDownIcon } from '@radix-ui/react-icons'
 import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react'
+
 function JobDetails() {
-
-
   const aboutRoleRef = useRef<HTMLDivElement>(null);
   const applyingRef = useRef<HTMLDivElement>(null);
 

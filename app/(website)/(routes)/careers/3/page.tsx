@@ -219,7 +219,7 @@ function JobDetails() {
                 HR@digitalpaygo.com
                 </a>
               </span> 
-            <span className='font-bold'> no later than Wednesday, 29th January, 2025.</span>
+            <span className='font-bold'> no later than Wednesday, 5th February, 2025.</span>
           </p>
 
           <p className='pt-4 mx-8 lg:mx-28'>ALL application must have the following documents:</p>

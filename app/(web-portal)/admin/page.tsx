@@ -35,7 +35,7 @@ export default async function Home() {
         <div className="relative hidden h-full flex-col bg-muted p-10 text-white dark:border-r lg:flex">
           <div className="absolute inset-0 bg-zinc-900" />
           <div className="relative z-20 flex items-center text-xl font-medium">
-            <Image alt='logo' src={'/images/favicon.ico'} width={150} height={40} className=' mr-5' />
+            <Image alt='logo' src={'/images/Digital Paygo Logo.png'} width={150} height={40} className=' mr-5' />
             Web Portal
           </div>
         </div>
