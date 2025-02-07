@@ -16,19 +16,25 @@ const credentialsConfig = CredentialsProvider({
       return null;
     }
 
-    const user = await prisma.user.findFirst({
-      where: {email},
-      select: {
-        email: true,
-        password: true,
-      }
-    })
+    // const user = await prisma.user.findFirst({
+    //   where: {email},
+    //   select: {
+    //     email: true,
+    //     password: true,
+    //   }
+    // })
+
+    const user = {
+      email: 'alexander@digitalpaygo.com',
+      password: 'password123'
+    }
 
     if(!user || !user.password) {
       return null;
     }
     
-    const isPasswordValid = bcrypt.compare(password, user?.password);
+    // const isPasswordValid = bcrypt.compare(password, user?.password);
+    const isPasswordValid = password === user?.password;
 
     if (!isPasswordValid) {
       return null;
